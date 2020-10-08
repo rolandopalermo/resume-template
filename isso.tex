@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\usepackage{hyperref} 
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{37474F}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Rolando Rodríguez-Cruz}
+\tagline{OCPJP6/MSc in Technology Management}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{American-passport-photo}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+    \email{rolando.roc@gmail.com}
+    \phone{+(52)445-140-1994}
+    \location{Guanajuato, México}
+    \linkedin{linkedin.com/in/RolandoPalermo}
+    \github{github.com/RolandoPalermo}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Work Experience}
+
+\cvevent{Full Stack Engineer (Kinesso IPG)}{BairesDev}{Jul 2019 -- Present}{San Francisco, California, USA}
+\begin{itemize}
+    \item Designing and developing user interfaces using Angular9 and Bootstrap 4.
+    \item Automation of End-To-End testing using Cypress.
+    \item Developing API Rest using Spring Boot, Spring Security (OAuth 2.0), Swagger and Gradle to integrate with Amazon EC2 cloud based architecture.
+    \item Developing data access layer classes using Spring JPA/Hibernate for interaction with MySQL Server.
+    \item Using JUnit with the Mockito framework for backend unit tests.
+    \item Using Github and Jenkins for CI/CD.
+    \item Scrum for agile development.
+\end{itemize}
+\cvtag{AWS}
+\cvtag{MySQL}
+\cvtag{Spring-Boot}
+\cvtag{Angular9}
+\cvtag{Cypress}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Electronic Invoicing Specialist}{Self-Employed}{Apr 2012 -- Present}{Guayaquil, Ecuador}
+\begin{itemize}
+    \item Electronic invoicing specialist with more than 8 years of experience designing and developing architectures for companies from Ecuador, Peru and Colombia using Java, XML, SOAP, REST API, UBL 2.0/2.1, XAdES-BES, XAdES-EPES.
+    \item Upgrades and enhancements according to the requirements of the tax authorities: SRI, DIAN, SUNAT.
+    \item Integration with third-party financial applications using Apache Camel framework and Camunda BPMN.
+    \item Creator of Veronica, the first open source e-invoicing platform for Ecuadorian companies using Spring-Boot, OAuth 2.0, PostgreSQL, iReport, Fabric8, Docker, MapStruct, ActiveMQ and DigitalOcean.
+    \item \url{https://github.com/rolandopalermo/veronica-open-api}
+    \item \url{https://veronica-api-sbox.rolandopalermo.com/swagger-ui.html}
+    \item \url{https://veronica-api.rolandopalermo.com/swagger-ui.html}
+\end{itemize}
+\cvtag{DigitalOcean}
+\cvtag{PostgreSQL}
+\cvtag{Docker}
+\cvtag{Spring-Boot}
+\cvtag{Camunda}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Backend Developer (24HourFitness)}{Softtek}{May 2018 -- May 2019}{Carlsbad, California, USA}
+\begin{itemize}
+    \item Developing API Rest using BPMN2.0, Camunda, Spring-Boot, XSLT, XPath, XQuery, SOAP/REST Web Services, JBoss.
+    \item Developing data access layer classes using Oracle 11g, MySQL and Apache Ignite.
+    \item Using Crucible, Bamboo and Gitlab for CI/CD.
+    \item Scrum for agile development.
+\end{itemize}
+\cvtag{MySQL}
+\cvtag{Oracle}
+\cvtag{Apache Ignite}
+\cvtag{Spring-Boot}
+\cvtag{Camunda}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Senior Developer}{Seguritech}{Nov 2017 -- Apr 2018}{León, Guanajuato, México}
+\begin{itemize}
+   \item Designing and implementation of a Computer Aided-Dispatch System.
+   \item Designing and developing user interfaces using  Angular 1.3, JQuery, Javascript, HTML 5, and CSS.
+   \item Developing API Rest using Java 8, Apache Tomcat, Spring Framework and JAX-WS and SQL Server.
+   \item Developing data access layer classes using Hibernate framework.
+   \item Gitlab for version control system.
+   \item Scrum for agile development.
+\end{itemize}
+\cvtag{SQL Server}
+\cvtag{Apache Tomcat}
+\cvtag{Spring Framework}
+\cvtag{AngularJS}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Developer}{MDP}{Mar 2017 -- Ago 2017}{Lima, Peru}
+\begin{itemize}
+   \item Web application migration from Struts 2 to Spring 4 with XML-based configuration using Gradle, Team Foundation Server and Websphere 8 Web container.
+   \item Integration with “IBM Web Content Manager” components.
+   \item Use Scrum for agile development.
+   \item \url{https://www.prima.com.pe}
+\end{itemize}
+\cvtag{Spring Framework}
+\cvtag{Websphere}
+\cvtag{IBM WCM}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Developer}{IA Interactive}{Nov 2016 -- Feb 2017}{Morelia, Michoacán, Mexico}
+\begin{itemize}
+   \item Designing and developing user interfaces using JQuery, Javascript, HTML 5, Bootstrap and Stylus.
+   \item Developing backend application using SOAP Web services, Java 8, Spring Framework 4 (Spring Core, Spring MVC, Spring Security) and Maven.
+   \item Integration with SAP HCM using using remote function calls (RFC) and SAP JCo.
+   \item Used Bitbucket for version control system.
+   \item Use Scrum for agile development.
+\end{itemize}
+\cvtag{Javascript}
+\cvtag{Spring Framework}
+\cvtag{SAP RFC}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Developer}{Hermes Transportes Blindados S.A.}{Jul 2013 -- Feb 2014}{Lima, Peru}
+\begin{itemize}
+   \item Designing and developing web services using Java, Oracle Forms 11g and WebLogic platform.
+   \item Developing data access layer using  PL/SQL, MyBatis, stored procedures and functions.
+   \item Analysis and documentation using UML.
+\end{itemize}
+\cvtag{Java}
+\cvtag{Oracle Forms 11}
+\cvtag{PL/SQL}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Developer}{CSTI Corp}{Jul 2012 -- Jun 2013}{Guayaquil, Ecuador}
+\begin{itemize}
+   \item Integration between J2SE platform and SAP SD module using remote function calls (RFC) and SAP JCo.
+   \item Developing data access layer using SQLite and JDBC.
+   \item Reports implementation using iReport and POI.
+   \item Developing graphical user interfaces using Java Swing.
+   \item Designing and developing an electronic invoicing platform based on SOA architecture.
+\end{itemize}
+\cvtag{SAP SD}
+\cvtag{SQLite}
+\cvtag{Java Swing}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Junior Developer}{GTE Perú}{Sep 2011 -- May 2012}{Lima, Peru}
+\begin{itemize}
+   \item Designing and developing a Web application for ADSL projects management using Extjs 3.0, JSON, JSP, Servlets, MySQL and Tomcat.
+   \item Integration between J2SE platform and DSLAM's management tools (Alcatel \& Huawei) by using TL-1 and CLI protocols.
+   \item Designing and developing a designer for network topology diagrams with support for 2D vector graphics using Java.
+\end{itemize}
+\cvtag{MySQL}
+\cvtag{JSP}
+\cvtag{Tomcat}
+\cvtag{TL\textendash1}
+
+\vspace{5px}
+\divider
+\vspace{5px}
+
+\cvevent{Java Junior Developer}{Empresa de Transportes Turismo Directo Asegurado}{Sep 2011 -- May 2012}{Trujillo, Peru}
+\begin{itemize}
+   \item Developing a web application bus tickets booking online using JSP, Servlets, JavaScript and Glassfish.
+   \item Developing data access layer using SQL Server 2008, JDBC and DAO pattern.
+\end{itemize}
+\cvtag{JSP}
+\cvtag{Servlets}
+\cvtag{SQL Server}
+\cvtag{Glassfish}
+
+\vspace{10px}
+
+%\cvevent{Aircraft Maintenance Engineering Internship }{Air %Algerie}{sep 2017 -- Jan 2018}{Algeria, Algiers}
+%\begin{itemize}
+ %   \item Establishment of a Peer-to-peer ATC communication %simulation.
+   % \item Troubleshooting and maintnance of a weather Radar .
+%\end{itemize}
+\cvsection{Education}
+
+\cvevent{Master in Technology Management}{University of Guanajuato}{Aug 2014 -- Jul 2016}{Guanajuato, Mexico}
+\cvevent{Computer Science}{National University of Trujillo}{May 2005 -- Dec 2009}{Trujillo, Peru}
+
+\clearpage
+
+\end{document}
